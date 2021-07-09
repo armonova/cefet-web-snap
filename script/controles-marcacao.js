@@ -21,6 +21,7 @@ const formatListValues = ['formato-oval', 'formato-retangular'];
 const formatList = formatListValues.map(format => document.querySelector(`input[value="${format}"]`));
 
 
+
 markingList.forEach(mark => {
     mark.addEventListener('click', () => {
         marking.classList.remove('selecionada');
