@@ -49,3 +49,32 @@ markingList.forEach(mark => {
         });
     });
 });
+
+xMarking.addEventListener('input', () => {
+    marking.style.left = `${xMarking.value}px`;
+});
+yMarking.addEventListener('input', () => {
+    marking.style.top = `${yMarking.value}px`;
+});
+widthMarking.addEventListener('input', () => {
+    marking.style.width = `${widthMarking.value}px`;
+});
+heightMarking.addEventListener('input', () => {
+    marking.style.height = `${heightMarking.value}px`;
+});
+titleMarking.addEventListener('input', () => {
+    marking.dataset.titulo = titleMarking.value;
+});
+contentMarking.addEventListener('input', () => {
+    marking.dataset.conteudo = contentMarkingEl.value;
+});
+colorMarking.addEventListener('input', () => {
+    marking.dataset.cor = colorMarking.value;
+});
+
+formatList.forEach(format => {
+    format.addEventListener('input', () => {
+        formatListValues.forEach(form => marking.classList.remove(form));
+        marking.classList.add(format.value);
+    });
+});
